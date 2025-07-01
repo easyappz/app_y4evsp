@@ -1,0 +1,122 @@
+.calculator {
+  background-color: #000000;
+  border-radius: 20px;
+  padding: 20px;
+  width: 320px;
+  margin: 20px auto;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+}
+
+.calculator-display {
+  background-color: #000000;
+  padding: 20px;
+  margin-bottom: 10px;
+  text-align: right;
+  min-height: 80px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+.display-text {
+  color: #ffffff;
+  font-size: 64px;
+  font-weight: 200;
+  line-height: 1;
+  overflow: hidden;
+  word-break: break-all;
+}
+
+.calculator-keypad {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.calculator-row {
+  display: flex;
+  gap: 10px;
+}
+
+.calculator-key {
+  border: none;
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  font-size: 32px;
+  font-weight: 400;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  outline: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.calculator-key:active {
+  transform: scale(0.95);
+}
+
+.calculator-key.number {
+  background-color: #333333;
+  color: #ffffff;
+}
+
+.calculator-key.number:hover {
+  background-color: #404040;
+}
+
+.calculator-key.function {
+  background-color: #a6a6a6;
+  color: #000000;
+}
+
+.calculator-key.function:hover {
+  background-color: #b8b8b8;
+}
+
+.calculator-key.operator {
+  background-color: #ff9500;
+  color: #ffffff;
+}
+
+.calculator-key.operator:hover {
+  background-color: #ffad33;
+}
+
+.calculator-key.operator.active {
+  background-color: #ffffff;
+  color: #ff9500;
+}
+
+.calculator-key.zero {
+  border-radius: 35px;
+  width: 150px;
+  justify-content: flex-start;
+  padding-left: 28px;
+}
+
+@media (max-width: 480px) {
+  .calculator {
+    width: 280px;
+    padding: 15px;
+  }
+  
+  .calculator-key {
+    width: 60px;
+    height: 60px;
+    font-size: 28px;
+  }
+  
+  .calculator-key.zero {
+    width: 130px;
+    padding-left: 24px;
+  }
+  
+  .display-text {
+    font-size: 48px;
+  }
+}
